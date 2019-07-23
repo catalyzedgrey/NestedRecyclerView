@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <color name="cessColor">#845EC2</color>
+    <color name="mtlColor">#D65DB1</color>
+    <color name="mechColor">#FF6F91</color>
+    <color name="bldgColor">#FF9671</color>
+    <color name="envColor">#FFC75F</color>
+    <color name="ldscColor">#F9F871</color>
+    <color name="commColor">#845EC2</color>
+    <color name="manfColor">#2C73D2</color>
+    <color name="enrgColor">#0081CF</color>
+    <color name="urbnColor">#0089BA</color>
+    <color name="civlColor">#008E9B</color>
+
+    <color name="whitishColor">#FBEAFF</color>
+
+
+
+</resources>

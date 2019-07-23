@@ -1,4 +1,7 @@
 package com.asu.nestedrecyclerview.activities.main;
 
-public class IAsyncTaskCallback {
+import java.util.List;
+
+public interface IAsyncTaskCallback <T> {
+    void onAsyncTaskComplete(List<T> trackList);
 }

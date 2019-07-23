@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Nested Recycler</string>
+
+    <string name="cess">CESS</string>
+    <string name="mtl">MTL</string>
+    <string name="mech">MECH</string>
+    <string name="bldg">BLDG</string>
+    <string name="env">ENV</string>
+    <string name="ldsc">LDSC</string>
+    <string name="comm">COMM</string>
+    <string name="manf">MANF</string>
+    <string name="enrg">ENRG</string>
+    <string name="urbn">URBN</string>
+    <string name="civl">CIVL</string>
+</resources>
