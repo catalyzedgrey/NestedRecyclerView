@@ -1,5 +1,6 @@
 package com.asu.nestedrecyclerview.adapters;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -8,7 +9,9 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.asu.nestedrecyclerview.R;
+import com.asu.nestedrecyclerview.activities.CourseDetailsActivity;
 import com.asu.nestedrecyclerview.models.Course;
+import com.google.gson.Gson;
 
 import java.util.List;
 
@@ -38,7 +41,7 @@ public class CourseAdapter extends RecyclerView.Adapter<CourseAdapter.MyViewHold
         notifyDataSetChanged();
     }
 
-    public class MyViewHolder extends RecyclerView.ViewHolder {
+    public class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         TextView nameTV, idTV, descTV;
         Course course;
 
@@ -47,12 +50,23 @@ public class CourseAdapter extends RecyclerView.Adapter<CourseAdapter.MyViewHold
             nameTV = itemView.findViewById(R.id.name_tv);
             idTV = itemView.findViewById(R.id.id_tv);
             descTV = itemView.findViewById(R.id.description_tv);
+
+            itemView.setOnClickListener(this);
         }
 
         private void bind(Course course) {
-            nameTV.setText(course.getName());
-            idTV.setText(course.getId()+"");
-            descTV.setText(course.getDescription());
+            this.course = course;
+            nameTV.setText(course.getCourseName());
+            idTV.setText(course.getCourseId()+"");
+            descTV.setText(course.getCourseDescription());
+        }
+
+        @Override
+        public void onClick(View v) {
+            String courseJson = (new Gson()).toJson(this.course);
+            Intent i = new Intent(v.getContext(), CourseDetailsActivity.class);
+            i.putExtra("course", courseJson);
+            v.getContext().startActivity(i);
         }
     }
 }
