@@ -5,41 +5,72 @@ import com.google.gson.annotations.SerializedName;
 public class Course {
     public final String type = "course";
     @SerializedName("id")
-    int id;
+    private String courseId;
     @SerializedName("name")
-    String name;
+    private String courseName;
     @SerializedName("desc")
-    String description;
+    private String courseDescription;
     @SerializedName("min_gpa")
-    float minGpa;
+    private float minGPA;
     @SerializedName("image_url")
-    String imgUrl;
+    private String courseImageUrl;
+    @SerializedName("instructor")
+    private Instructor instructor;
 
-
-    public Course(String name, int id, String description) {
-        this.name = name;
-        this.id = id;
-        this.description = description;
+    public Course(String courseId, String courseName, String courseDescription, float minGPA, String courseImageUrl, Instructor instructor) {
+        this.courseId = courseId;
+        this.courseName = courseName;
+        this.courseDescription = courseDescription;
+        this.minGPA = minGPA;
+        this.courseImageUrl = courseImageUrl;
+        this.instructor = instructor;
     }
 
-
-    public int getId() {
-        return id;
+    public String getCourseId() {
+        return courseId;
     }
 
-    public String getName() {
-        return name;
+    public void setCourseId(String courseId) {
+        this.courseId = courseId;
     }
 
-    public String getDescription() {
-        return description;
+    public String getCourseName() {
+        return courseName;
     }
 
-    public float getMinGpa() {
-        return minGpa;
+    public void setCourseName(String courseName) {
+        this.courseName = courseName;
     }
 
-    public String getImgUrl() {
-        return imgUrl;
+    public String getCourseDescription() {
+        return courseDescription;
+    }
+
+    public void setCourseDescription(String courseDescription) {
+        this.courseDescription = courseDescription;
+    }
+
+    public float getMinGPA() {
+        return minGPA;
+    }
+
+    public void setMinGPA(float minGPA) {
+        this.minGPA = minGPA;
+    }
+
+    public String getCourseImageUrl() {
+        return courseImageUrl;
+    }
+
+    public void setCourseImageUrl(String courseImageUrl) {
+        this.courseImageUrl = courseImageUrl;
+    }
+
+    public Instructor getInstructor() {
+        return instructor;
+    }
+
+    public void setInstructor(Instructor instructor) {
+        this.instructor = instructor;
     }
 }
